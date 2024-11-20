@@ -28,3 +28,10 @@ merger_config = {
     ],
     'source_attr_name': 'source'  # Attribute name to indicate the data's source
 }
+
+# Configuration for logger
+logger_config = {
+    'log_level': 'INFO',
+    'log_dir': 'logs',
+    'enable_console_logging': True,
+}

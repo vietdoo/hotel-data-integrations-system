@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 from datetime import datetime
-
+from configs.config import logger_config
 
 class Logger:
     def __init__(self, log_dir, log_level):
@@ -55,5 +55,7 @@ class Logger:
             self.logger.removeHandler(self.file_handler)
             self.file_handler.close()
 
-logger = Logger('logs', logging.INFO)
-# logger.disable_console_log()
+logger = Logger(logger_config['log_dir'], logger_config['log_level'])
+
+if not logger_config['enable_console_logging']:
+    logger.disable_console_log()
