@@ -33,5 +33,5 @@ merger_config = {
 logger_config = {
     'log_level': 'INFO',
     'log_dir': 'logs',
-    'enable_console_logging': True,
+    'enable_console_logging': False,
 }
